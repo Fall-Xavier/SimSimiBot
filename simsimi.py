@@ -79,7 +79,7 @@ class SimSimi:
 				self.delay()
 				
 				###----------[ BAGIAN BOT ]---------- ###
-				req = self.ses.get(f"{self.url}?text={kamu}&lc=id&cf=false", headers=self.headers)
+				req = self.ses.get(f"{self.url}?text={pesan}&lc=id&cf=false", headers=self.headers)
 				response = json.loads(req.text)["success"]
 				print("\033[3A")
 				bot.append(Panel(f"{P}{response}", style=f"{J}"))
